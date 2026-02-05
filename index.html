@@ -88,7 +88,7 @@
         <br />
         <br />
         <input
-          type="text"
+          type="search"
           name="q"
           id="searchBasic"
           placeholder="e.g Sarah Johnson"
@@ -150,6 +150,8 @@
       </form>
     </section>
 
+    <hr />
+
     <!-- SECTION 2: LOGIN -->
     <section id="login">
       <h2>Login Form</h2>
@@ -194,6 +196,131 @@
           <br />
           <br />
           <p>Forgot your password? → <a href="#">Reset it here</a></p>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr />
+
+    <!-- SECTION 3: REGISTRATION FORM -->
+    <section id="registration">
+      <p>
+        <strong>Business Use: </strong>A new hire gets their company portal
+        account set up.
+      </p>
+
+      <form action="/registration" method="post">
+        <fieldset>
+          <legend>Create Your Portal Account</legend>
+
+          <label for="registrationName">First Name: *</label>
+          <br />
+          <input
+            type="text"
+            id="registrationName"
+            name="firstName"
+            required
+            placeholder="Your first name"
+            size="30"
+            autocomplete="given-name"
+          />
+
+          <br />
+          <br />
+
+          <label for="registrationLastName">Last Name: *</label>
+          <br />
+          <input
+            type="text"
+            id="registrationLastName"
+            name="lastName"
+            required
+            placeholder="Your last name"
+            size="30"
+            autocomplete="family-name"
+          />
+
+          <br />
+          <br />
+
+          <label for="registrationEmail">Work Email: *</label>
+          <br />
+          <input
+            type="email"
+            id="registrationEmail"
+            name="email"
+            required
+            placeholder="name@company.be"
+            size="40"
+            autocomplete="email"
+          />
+
+          <br />
+          <br />
+
+          <label for="registrationPassword">Password: *</label>
+          <br />
+          <input
+            type="password"
+            id="registrationPassword"
+            name="password"
+            required
+            placeholder="Min. 8 characters"
+            minlength="8"
+            size="30"
+            autocomplete="new-password"
+          />
+          <br />
+          <small>
+            Must be at least 8 characters. Use letters, numbers, and symbols.
+          </small>
+
+          <br />
+          <br />
+
+          <label for="confirmPassword">Confirm Password: *</label>
+          <br />
+          <input
+            type="password"
+            id="confirmPassword"
+            name="passwordConfirm"
+            required
+            placeholder="Re-enter password"
+            minlength="8"
+            size="30"
+            autocomplete="new-password"
+          />
+
+          <br />
+          <br />
+
+          <label for="regDept">Department: *</label>
+          <br />
+          <select name="department" id="regDept">
+            <option value="">-- Select your department --</option>
+            <option value="sales">Sales</option>
+            <option value="engineering">Engineering</option>
+            <option value="marketing">Marketing</option>
+            <option value="hr">Human Resources</option>
+          </select>
+          <br />
+          <br />
+          <input
+            type="checkbox"
+            id="regTerms"
+            name="terms"
+            value="agreed"
+            required
+          />
+          <label for="regTerms"
+            >I have read and agree to the <a href="#">Terms of Use</a> and
+            <a href="#">Privacy Policy</a> *</label
+          >
+
+          <br />
+          <br />
+
+          <button type="submit">Create Account</button>
         </fieldset>
       </form>
     </section>
