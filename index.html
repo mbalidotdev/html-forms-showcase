@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TechCorp Internal Portal - Complete HTML Forms Showcase covering every form type used in web development"
+    />
+    <title>TechCorp Portal | All Form Types Showcase</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>TechCorp Internal Portal</h1>
+      <p>
+        <strong>Complete Forms Showcase</strong> | Every form type used in web
+        development
+      </p>
+      <p>
+        <small
+          >All forms are pure HTML — no CSS, no JavaScript. This is a learning
+          reference.</small
+        >
+      </p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <h2>Forms Index</h2>
+      <ol>
+        <li>
+          <a href="#search">Search Form</a> — Find employees, jobs, documents
+        </li>
+        <li><a href="#login">Login Form</a> — Portal access</li>
+        <li>
+          <a href="#registration">Registration / Signup Form</a> — New employee
+          onboarding
+        </li>
+        <li>
+          <a href="#password-reset">Password Reset Form</a> — Account recovery
+        </li>
+        <li>
+          <a href="#contact">Contact / Support Form</a> — Internal helpdesk
+          ticket
+        </li>
+        <li>
+          <a href="#newsletter">Newsletter Subscription</a> — Company updates
+        </li>
+        <li>
+          <a href="#feedback">Feedback / Survey Form</a> — Employee satisfaction
+        </li>
+        <li>
+          <a href="#booking">Booking / Reservation Form</a> — Meeting rooms
+        </li>
+        <li><a href="#filter">Filter Form</a> — Browse open job positions</li>
+        <li>
+          <a href="#quiz">Quiz / Onboarding Form</a> — New hire knowledge check
+        </li>
+        <li><a href="#upload">Document Upload Form</a> — Submit files to HR</li>
+        <li>
+          <a href="#expense">Expense Report Form</a> — Submit work expenses
+        </li>
+        <li>
+          <a href="#profile">Profile / Settings Form</a> — Edit your account
+        </li>
+        <li>
+          <a href="#application">Job Application Form</a> — Apply for an open
+          position
+        </li>
+      </ol>
+    </nav>
+
+    <hr />
+
+    <!-- SECTION 1: SEARCH FORM  -->
+    <section id="search">
+      <h2>Search Form</h2>
+      <p>
+        <strong>Business Use: </strong>Find employees, documents, or job
+        postings across the company.
+      </p>
+
+      <!-- SEARCH BASIC -->
+      <h3>Basic Search</h3>
+      <form action="/search" method="get">
+        <label for="searchBasic">Search employees:</label>
+        <br />
+        <br />
+        <input
+          type="text"
+          name="q"
+          id="searchBasic"
+          placeholder="e.g Sarah Johnson"
+          size="40"
+          autofocus
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <br />
+
+      <!-- SEARCH ADVANCED -->
+      <h3>Advanced Search (with filters)</h3>
+      <form action="/search" method="get">
+        <fieldset>
+          <legend>Advanced Employee Search</legend>
+          <label for="searchName">Name:</label>
+          <br />
+          <input
+            type="text"
+            id="searchName"
+            name="name"
+            placeholder="Full Name ..."
+            size="30"
+          />
+
+          <br />
+          <br />
+
+          <label for="searchDept">Department:</label>
+          <br />
+          <select name="department" id="searchDept">
+            <option value="">All Departments</option>
+            <option value="sales">Sales</option>
+            <option value="engineering">Engineering</option>
+            <option value="marketing">Marketing</option>
+            <option value="hr">Human Resources</option>
+          </select>
+
+          <br />
+          <br />
+
+          <label for="searchCity">City:</label>
+          <br />
+          <input
+            type="text"
+            id="searchCity"
+            name="city"
+            placeholder="Brussels, Antwerp..."
+            size="20"
+          />
+
+          <br />
+          <br />
+
+          <button type="submit">Search</button>
+          <button type="reset">Clear</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- SECTION 2: LOGIN -->
+    <section id="login">
+      <h2>Login Form</h2>
+      <p>
+        <strong>Business Use: </strong>Employees log into the company portal
+      </p>
+
+      <form action="/login" method="post">
+        <fieldset>
+          <legend>Portal Login</legend>
+          <label for="loginEmail">Email Address:</label>
+          <br />
+          <input
+            type="email"
+            id="loginEmail"
+            name="email"
+            placeholder="yourname@company.be"
+            size="50"
+            autocomplete="email"
+            required
+          />
+          <br />
+          <br />
+
+          <label for="loginPassword">Password:</label>
+          <br />
+          <input
+            type="password"
+            id="loginPassword"
+            name="password"
+            placeholder="••••••••"
+            required
+            autocomplete="current-password"
+          />
+          <br />
+          <br />
+          <input type="checkbox" id="rememberMe" name="remember" value="true" />
+          <label for="rememberMe">Remember me on this device</label>
+          <br />
+          <br />
+          <button type="submit">Log In</button>
+          <br />
+          <br />
+          <p>Forgot your password? → <a href="#">Reset it here</a></p>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
