@@ -324,5 +324,49 @@
         </fieldset>
       </form>
     </section>
+
+    <hr />
+
+    <!-- SECTION 4: PASSWORD RESET FORM -->
+    <section id="password-reset">
+      <h2>Password Reset Form</h2>
+      <p>
+        <strong>Business Use: </strong>Employee forgot their portal password
+      </p>
+
+      <form action="/password-reset" method="post">
+        <fieldset>
+          <legend>Reset Your Password</legend>
+
+          <br />
+
+          <label for="resetEmail">Work Email Address: *</label>
+
+          <br />
+
+          <input
+            type="email"
+            id="resetEmail"
+            name="email"
+            required
+            size="40"
+            autocomplete="email"
+            placeholder="yourname@company.be"
+          />
+
+          <br />
+          <br />
+
+          <button type="submit">Send Reset Link</button>
+
+          <p>
+            You will receive a reset link at your registered email address
+            within a few minutes.
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr />
   </body>
 </html>
