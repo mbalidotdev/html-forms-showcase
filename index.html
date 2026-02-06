@@ -368,5 +368,101 @@
     </section>
 
     <hr />
+
+    <!-- SECTION 5: CONTACT / SUPPORT FORM -->
+    <section id="contact">
+      <h2>Contact / Support Form</h2>
+      <p>
+        <strong>Business Use: </strong>Employee submits an IT helpdesk ticket.
+      </p>
+
+      <form action="/support/ticket" method="post">
+        <fieldset>
+          <legend>Submit a Support Ticket</legend>
+          <br />
+          <label for="ticketSubject">Subject: *</label>
+          <br />
+          <input
+            type="text"
+            id="ticketSubject"
+            name="subject"
+            placeholder="Brief summary of your issue"
+            required
+            size="50"
+          />
+
+          <br />
+          <br />
+
+          <label for="ticketCategory">Category: *</label>
+          <br />
+          <select name="category" id="ticketCategory">
+            <option value="">-- Select a category --</option>
+            <option value="hardware">Hardware Issue</option>
+            <option value="software">Software / App Problem</option>
+            <option value="network">Network / Internet</option>
+            <option value="access">Access / Permissions</option>
+            <option value="account">Account Problems</option>
+            <option value="other">Other</option>
+          </select>
+
+          <br />
+          <br />
+
+          <label for="priority">Priority: *</label>
+          <br />
+
+          <input
+            type="radio"
+            name="priority"
+            id="priorityLow"
+            required
+            value="low"
+          />
+          <label for="priorityLow">Low - not urgent</label>
+          <br />
+          <input
+            type="radio"
+            name="priority"
+            id="priorityMedium"
+            required
+            value="medium"
+          />
+
+          <label for="priorityMedium">Medium - affects my work</label>
+          <br />
+          <input
+            type="radio"
+            name="priority"
+            id="priorityHigh"
+            required
+            value="high"
+          />
+          <label for="priorityHigh">High - blocking me completely</label>
+
+          <br />
+          <br />
+
+          <label for="ticketMessage">Describe the issue: *</label>
+          <br />
+          <textarea
+            name="message"
+            id="ticketMessage"
+            rows="6"
+            cols="55"
+            maxlength="3000"
+            placeholder="What happened? When did it start? What did you try?"
+            required
+          ></textarea>
+
+          <br />
+          <br />
+
+          <button type="submit">Submit Ticket</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr />
   </body>
 </html>
