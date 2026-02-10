@@ -492,6 +492,58 @@
       </form>
 
       <br /><br />
+
+      <!-- WITH PREFERENCES -->
+      <h3>With Preferences</h3>
+      <form action="/newsletter" method="post">
+        <fieldset>
+          <legend>Newsletter Preferences</legend>
+          <br />
+
+          <label for="nlEmailPref">Email: *</label>
+          <br />
+          <input
+            type="email"
+            id="nlEmailPref"
+            name="email"
+            placeholder="yourname@company.be"
+            size="40"
+            required
+          />
+          <br /><br />
+
+          <p><strong>What topics interest you?</strong></p>
+          <input type="checkbox" id="nlCompany" name="topics" value="company" />
+          <label for="nlCompany">Company News</label>
+          <br />
+          <input type="checkbox" id="nlEvents" name="topics" value="events" />
+          <label for="nlEvents">Events & Team Activities</label>
+          <br />
+          <input type="checkbox" id="nlJobs" name="topics" value="jobs" />
+          <label for="nlJobs">New Job Openings</label>
+          <br />
+          <input
+            type="checkbox"
+            id="nlTraining"
+            name="topics"
+            value="training"
+          />
+          <label for="nlTraining">Training & Development</label>
+
+          <br /><br />
+
+          <label for="nlFrequency">How often?</label>
+          <br />
+          <select name="frequency" id="nlFrequency">
+            <option value="daily">Daily</option>
+            <option value="weekly" selected>Weekly (recommended)</option>
+            <option value="monthly">Monthly</option>
+          </select>
+          <br />
+          <br />
+          <button type="submit">Subscribe</button>
+        </fieldset>
+      </form>
     </section>
   </body>
 </html>
