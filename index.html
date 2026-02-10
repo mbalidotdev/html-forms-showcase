@@ -545,5 +545,131 @@
         </fieldset>
       </form>
     </section>
+
+    <hr />
+
+    <!-- SECTION 7: FEEDBACK SURVERY FORM -->
+    <section id="feedback">
+      <h2>Feedback / Survey Form</h2>
+      <p>
+        <strong>Business Use: </strong>Quarterly employee satisfaction survery
+        at the company.
+      </p>
+      <form action="/feedback" method="post">
+        <fieldset>
+          <legend>Q1 2024 Employee Satisfaction Survery</legend>
+
+          <p>
+            <strong>1. How satisfied are you with your current role? *</strong>
+          </p>
+
+          <input
+            type="radio"
+            id="sat1"
+            name="roleSatisfaction"
+            value="1"
+            required
+          />
+          <label for="sat1">1 — Very Dissatisfied</label><br />
+          <input type="radio" id="sat2" name="roleSatisfaction" value="2" />
+          <label for="sat2">2 — Dissatisfied</label><br />
+          <input type="radio" id="sat3" name="roleSatisfaction" value="3" />
+          <label for="sat3">3 — Neutral</label><br />
+          <input type="radio" id="sat4" name="roleSatisfaction" value="4" />
+          <label for="sat4">4 — Satisfied</label><br />
+          <input type="radio" id="sat5" name="roleSatisfaction" value="5" />
+          <label for="sat5">5 — Very Satisfied</label>
+
+          <br />
+
+          <p>
+            <strong
+              >2. How likely are you to recommend TechCorp as a workplace?
+              (0-10) *</strong
+            >
+          </p>
+
+          <label for="nps">Score:</label>
+          <input type="range" id="nps" name="nps" min="0" max="10" value="5" />
+          <br />
+          <small>0 = Not at all likely &nbsp; 10 = Extremely likely</small>
+
+          <br />
+
+          <p>
+            <strong
+              >3. Which areas do you think TechCorp does well? (Select all that
+              apply)</strong
+            >
+          </p>
+
+          <input
+            type="checkbox"
+            id="wellWorkLife"
+            name="strengths"
+            value="work-life-balance"
+          />
+          <label for="wellWorkLife">Work-life balance</label><br />
+          <input
+            type="checkbox"
+            id="wellTeam"
+            name="strengths"
+            value="team-culture"
+          />
+          <label for="wellTeam">Team culture</label><br />
+          <input
+            type="checkbox"
+            id="wellGrowth"
+            name="strengths"
+            value="growth-opportunities"
+          />
+          <label for="wellGrowth">Growth opportunities</label><br />
+          <input
+            type="checkbox"
+            id="wellSalary"
+            name="strengths"
+            value="compensation"
+          />
+          <label for="wellSalary">Compensation & benefits</label><br />
+          <input
+            type="checkbox"
+            id="wellLeader"
+            name="strengths"
+            value="leadership"
+          />
+          <label for="wellLeader">Leadership</label>
+
+          <br />
+
+          <p><strong>4. Which area needs the most improvement? *</strong></p>
+          <select id="improvement" name="improvement" required>
+            <option value="">-- Select one --</option>
+            <option value="tools">Tools & Technology</option>
+            <option value="communication">Internal Communication</option>
+            <option value="training">Training & Development</option>
+            <option value="worklife">Work-Life Balance</option>
+            <option value="office">Office Environment</option>
+            <option value="management">Management</option>
+          </select>
+
+          <br />
+
+          <p>
+            <strong>5. Any other comments or suggestions? (Optional)</strong>
+          </p>
+          <textarea
+            id="surveyComments"
+            name="comments"
+            rows="5"
+            cols="55"
+            placeholder="Share your thoughts openly..."
+          ></textarea>
+
+          <br /><br />
+
+          <button type="submit">Submit Survey</button>
+        </fieldset>
+      </form>
+    </section>
   </body>
 </html>
