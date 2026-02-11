@@ -805,5 +805,82 @@
     </section>
 
     <hr />
+
+    <!-- SECTION 9: FILTER FORM -->
+    <section id="filter">
+      <h2>Filter Form</h2>
+      <p>
+        <strong>Business Use: </strong>Browse and filter open job positions.
+      </p>
+      <form action="/jobs" method="get">
+        <fieldset>
+          <legend>Filter Job Openings</legend>
+          <br />
+          <label for="filterKeyword">Keywords:</label>
+          <br />
+          <input
+            type="search"
+            id="filterKeyword"
+            name="q"
+            placeholder="e.g. developer, manager..."
+            size="35"
+          />
+          <br />
+          <p><strong>Department</strong></p>
+          <input type="checkbox" id="filterSales" name="dept" value="sales" />
+          <label for="filterSales">Sales</label>
+          <br />
+          <input
+            type="checkbox"
+            id="filterEng"
+            name="dept"
+            value="engineering"
+          />
+          <label for="filterEng">Engineering</label><br />
+          <input type="checkbox" id="filterMkt" name="dept" value="marketing" />
+          <label for="filterMkt">Marketing</label><br />
+          <input type="checkbox" id="filterHR" name="dept" value="hr" />
+          <label for="filterHR">Human Resources</label>
+          <br />
+          <p><strong>Employment Type:</strong><br /></p>
+          <input type="checkbox" id="filterFT" name="type" value="full-time" />
+          <label for="filterFT">Full-Time</label><br />
+          <input type="checkbox" id="filterPT" name="type" value="part-time" />
+          <label for="filterPT">Part-Time</label><br />
+          <input
+            type="checkbox"
+            id="filterContract"
+            name="type"
+            value="contract"
+          />
+          <label for="filterContract">Contract</label>
+          <br />
+          <br />
+          <label for="filterLocation">Location:</label><br />
+          <select id="filterLocation" name="location">
+            <option value="">All Locations</option>
+            <option value="brussels">Brussels</option>
+            <option value="antwerp">Antwerp</option>
+            <option value="ghent">Ghent</option>
+            <option value="remote">Remote</option>
+          </select>
+          <br />
+          <br />
+          <label for="filterSort">Sort by:</label><br />
+          <select id="filterSort" name="sort">
+            <option value="newest">Newest First</option>
+            <option value="salary-high">Salary: High to Low</option>
+            <option value="salary-low">Salary: Low to High</option>
+            <option value="relevance">Most Relevant</option>
+          </select>
+          <br />
+          <br />
+          <button type="submit">Apply Filters</button>
+          <button type="reset">Reset</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr />
   </body>
 </html>
