@@ -882,5 +882,76 @@
     </section>
 
     <hr />
+
+    <!-- SECTION 10: DOCUMENT UPLOAD FORM -->
+    <section id="upload">
+      <h2>Document Upload Form</h2>
+      <p>
+        <strong>Business Use:</strong> Employees upload documents to HR
+        (contracts, certificates, etc.).
+      </p>
+
+      <form action="/documents/upload" method="post">
+        <fieldset>
+          <legend>Upload Documents to HR</legend>
+          <br />
+          <label for="uploadType">Document Type: *</label>
+          <br />
+          <select id="uploadType" name="documentType" required>
+            <option value="">-- What are you uploading? --</option>
+            <option value="contract">Employment Contract</option>
+            <option value="certificate">Certificate / Diploma</option>
+            <option value="id">ID / Passport</option>
+            <option value="insurance">Insurance Document</option>
+            <option value="other">Other</option>
+          </select>
+          <br />
+          <br />
+          <!-- Single file upload -->
+
+          <label for="uploadMain">Main Document: * (PDF only)</label><br />
+          <input
+            type="file"
+            id="uploadMain"
+            name="mainDocument"
+            accept=".pdf"
+            required
+          />
+          <br />
+          <br />
+
+          <!-- Multiple file upload -->
+
+          <label for="uploadSupport"
+            >Supporting Documents: (Optional, multiple allowed)</label
+          >
+          <br />
+          <input
+            type="file"
+            id="uploadSupport"
+            name="supportingDocuments"
+            accept=".pdf,.jpg,.jpeg,.png"
+            multiple
+          />
+          <br />
+          <small>Accepted formats: PDF, JPG, PNG. Max 5MB per file.</small>
+          <br />
+          <br />
+
+          <label for="uploadNotes">Notes for HR:</label>
+          <br />
+          <textarea
+            id="uploadNotes"
+            name="notes"
+            rows="3"
+            cols="50"
+            placeholder="Anything HR should know about these documents?"
+          ></textarea>
+          <br />
+          <br />
+          <button type="submit">Upload Documents</button>
+        </fieldset>
+      </form>
+    </section>
   </body>
 </html>
