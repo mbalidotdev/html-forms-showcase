@@ -671,5 +671,139 @@
         </fieldset>
       </form>
     </section>
+
+    <!-- SECTION 8: BOOKING/RESERVATION FORM -->
+    <section id="booking">
+      <h2>Booking / Reservation Form</h2>
+      <p>
+        <strong>Business Use:</strong> Book a meeting room at the TechCorp
+        office.
+      </p>
+      <form action="/booking" method="post">
+        <fieldset>
+          <legend>Meeting Room Booking</legend>
+          <br />
+          <label for="bookRoom">Room: *</label>
+          <br />
+          <select name="room" id="bookRoom">
+            <option value="">-- Select a room --</option>
+            <optgroup label="Brussels Office">
+              <option value="bru-a">Room A — 6 people</option>
+              <option value="bru-b">Room B — 12 people</option>
+              <option value="bru-board">Boardroom — 20 people</option>
+            </optgroup>
+            <optgroup label="Antwerp Office">
+              <option value="ant-a">Room A — 6 people</option>
+              <option value="ant-b">Room B — 10 people</option>
+            </optgroup>
+          </select>
+
+          <br />
+          <br />
+
+          <label for="bookDate">Date: *</label>
+          <br />
+          <input
+            type="date"
+            id="bookDate"
+            name="date"
+            min="2024-02-01"
+            max="2024-12-31"
+            required
+          />
+
+          <br />
+          <br />
+
+          <label for="bookStart">Start Time: *</label>
+          <br />
+          <input
+            type="time"
+            id="bookStart"
+            name="startTime"
+            required
+            min="08:00"
+            max="18:00"
+            step="1800"
+          />
+          <br />
+          <small>Office hours: 08:00 - 18:00. Slots in 30-minute blocks</small>
+          <br />
+          <br />
+          <label for="bookStart">End Time: *</label>
+          <br />
+          <input
+            type="time"
+            id="bookEnd"
+            name="endTime"
+            required
+            min="08:30"
+            max="18:00"
+            step="1800"
+          />
+          <br />
+          <br />
+          <label for="bookAttendees">Expected Attendees: *</label>
+          <br />
+          <input
+            type="number"
+            id="bookAttendees"
+            name="attendees"
+            min="1"
+            max="20"
+            required
+            placeholder="How many people?"
+          />
+          <br />
+          <br />
+          <label for="bookPurpose">Meeting Purpose:</label>
+          <br />
+          <input
+            type="text"
+            id="bookPurpose"
+            name="purpose"
+            placeholder="e.g. Sprint planning, Client meeting..."
+            size="45"
+          />
+
+          <br />
+          <p><strong>Equipment needed?</strong></p>
+          <input
+            type="checkbox"
+            id="eqProjector"
+            name="equipment"
+            value="projector"
+          />
+          <label for="eqProjector">Projector</label><br />
+          <input
+            type="checkbox"
+            id="eqWhiteboard"
+            name="equipment"
+            value="whiteboard"
+          />
+          <label for="eqWhiteboard">Whiteboard</label><br />
+          <input
+            type="checkbox"
+            id="eqVideoConf"
+            name="equipment"
+            value="videoconference"
+          />
+          <label for="eqVideoConf">Video Conference Setup</label><br />
+          <input
+            type="checkbox"
+            id="eqCatering"
+            name="equipment"
+            value="catering"
+          />
+          <label for="eqCatering">Catering (coffee & snacks)</label>
+          <br />
+          <br />
+          <button type="submit">Book Room</button>
+          <button type="reset">Clear</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr />
   </body>
 </html>
